@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class Api::V1::ProductsController < ApplicationController
 
 	# before_action :set_auth_token
 
