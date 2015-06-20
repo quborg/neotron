@@ -1,11 +1,12 @@
-Rails.application.routes.draw do
+require 'api_constraints'
 
-  devise_for :users
+ZaminTronApi::Application.routes.draw do
+
 	root 'application#hello'
 
 	constraints subdomain: 'api' do
 		namespace :api, path: '/', defaults: { format: :json } do
-			scope module: :v1, path: '/v1' do
+			scope module: :v1, path: '/v1', constraints: ApiConstraints.new(version: 1, default: true) do
 				resources :products
 				# resources :users
 			end
