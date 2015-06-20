@@ -5,6 +5,6 @@ class ApplicationController < ActionController::Base
 	# filter_parameter_logging :password
 
 	def hello
-		render text: "Hello World !"
+		render text: "Hello World !\n"
 	end
 end
