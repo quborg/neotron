@@ -10,7 +10,7 @@ ZaminTronApi::Application.routes.draw do
 		namespace :api, path: '/', defaults: { format: :json } do
 			scope module: :v1, path: '/v1', constraints: ApiConstraints.new(version: 1, default: true) do
 				resources :products
-				resources :users, :only => [:show, :create]
+				resources :users, :only => [:show, :create, :update]
 			end
 		end
 	end
