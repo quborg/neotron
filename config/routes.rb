@@ -2,6 +2,7 @@ require 'api_constraints'
 
 ZaminTronApi::Application.routes.draw do
 
+	mount SabisuRails::Engine => "/sabisu_rails"
 	root 'application#hello'
 
 	devise_for :users
