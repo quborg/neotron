@@ -29,8 +29,7 @@ describe Api::V1::UsersController do
 		context "when is not created" do
 			before(:each) do
 				#notice I'm not including the email
-				@invalid_user_attributes = { 	password: "12345678",
-												password_confirmation: "12345678" }
+				@invalid_user_attributes = { password: "12345678", password_confirmation: "12345678" }
 				post :create, { user: @invalid_user_attributes }, format: :json
 			end
 			it "renders an errors json" do
@@ -48,7 +47,7 @@ describe Api::V1::UsersController do
 	describe "PUT/PATCH #update" do
 		before(:each) do
 			@user = FactoryGirl.create :user
-			request.headers['Authorization'] =  @user.auth_token
+			api_authorization_header @user.auth_token
 		end
 		context "when is successfully updated" do
 			before(:each) do
