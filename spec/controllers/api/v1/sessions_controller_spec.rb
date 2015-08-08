@@ -8,7 +8,7 @@ describe Api::V1::SessionsController do
 		end
 		context "when the credentials are correct" do
 			before(:each) do
-				credentials = { email: @user.email, password: "12345678" }
+				credentials = { email: @user.email, password: "@miloud#" }
 				post :create, { session: credentials }
 			end
 			it "returns the user record corresponding to the given credentials" do
@@ -31,7 +31,7 @@ describe Api::V1::SessionsController do
 	describe "DELETE #destroy" do
 		before(:each) do
 			@user = FactoryGirl.create :user
-			sign_in @user, store: false
+			sign_in @user #, store: false
 			delete :destroy, id: @user.auth_token
 		end
 		it { should respond_with 204 }
