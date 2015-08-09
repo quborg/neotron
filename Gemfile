@@ -11,6 +11,7 @@ gem 'coffee-rails', '~> 4.1.0'
 gem 'jquery-rails'
 
 gem 'active_model_serializers'
+# gem 'active_model_serializers', git: 'git@github.com:rails-api/active_model_serializers.git', branch: '0-8-stable'
 
 gem 'devise'
 
@@ -24,10 +25,11 @@ gem 'font-awesome-rails'
 
 gem 'simple_form'
 
-group :test do
-	gem "rspec-rails"
-	gem 'rspec-collection_matchers'
-	gem "shoulda-matchers"
+group :development do
+	gem 'sqlite3'
+	gem 'byebug'
+	gem 'web-console', '~> 2.0'
+	gem 'spring'
 end
 
 group :development, :test do
@@ -35,11 +37,10 @@ group :development, :test do
 	gem 'ffaker'
 end
 
-group :development do
-	gem 'sqlite3'
-	gem 'byebug'
-	gem 'web-console', '~> 2.0'
-	gem 'spring'
+group :test do
+	gem "rspec-rails"
+	gem 'rspec-collection_matchers'
+	gem "shoulda-matchers"
 end
 
 group :doc do

@@ -6,7 +6,7 @@ module Request
 	end
 	module HeadersHelpers
 		def api_header(version = 1)
-			request.headers['Accept'] = "application/vnd.marketplace.v#{version}"
+			request.headers['Accept'] = "application/api.zamin.tron:3000/v#{version}"
 		end
 		def api_authorization_header(token)
 			request.headers['Authorization'] =  token

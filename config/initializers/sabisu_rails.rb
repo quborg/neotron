@@ -15,7 +15,7 @@ SabisuRails.setup do |config|
 	# Headers to include on each request
 	#
 	# You can configure the api headers fairly easy by just adding the correct headers
-	# config.api_headers = { "Accept" => "application/api.zamin.tron:3000/v1" }
+	config.api_headers = { "Accept" => "application/api.zamin.tron:3000/v1/" }
 	#
 	# config.api_headers = {}
 

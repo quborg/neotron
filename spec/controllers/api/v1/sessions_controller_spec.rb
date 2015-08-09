@@ -8,7 +8,7 @@ describe Api::V1::SessionsController do
 		end
 		context "when the credentials are correct" do
 			before(:each) do
-				credentials = { email: @user.email, password: "@miloud#" }
+				credentials = { email: @user.email, password: "12345678" }
 				post :create, { session: credentials }
 			end
 			it "returns the user record corresponding to the given credentials" do
