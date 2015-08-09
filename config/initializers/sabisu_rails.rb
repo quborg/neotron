@@ -4,6 +4,7 @@ SabisuRails.setup do |config|
 
 	# Base uri for posting the
 	config.base_api_uri = 'api.zamin.tron'
+	# config.base_api_uri = ENV['API_URL']
 
 	# Ignored attributes for building the forms
 	# config.ignored_attributes = %w{ created_at updated_at id }
@@ -14,7 +15,7 @@ SabisuRails.setup do |config|
 	# Headers to include on each request
 	#
 	# You can configure the api headers fairly easy by just adding the correct headers
-	config.api_headers = { "Accept" => "application/api.zamin.tron:3000/v1" }
+	# config.api_headers = { "Accept" => "application/api.zamin.tron:3000/v1" }
 	#
 	# config.api_headers = {}
 
@@ -30,6 +31,7 @@ SabisuRails.setup do |config|
 	# Application name
 	# mattr_accessor :app_name
 	# @@app_name = Rails.application.class.parent_name
+	# @@app_name = ZaminTronApi::Application
 
 	# Authentication
 	# mattr_accessor :authentication_username
