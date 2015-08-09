@@ -27,9 +27,12 @@ gem 'simple_form'
 group :test do
 	gem "rspec-rails"
 	gem 'rspec-collection_matchers'
+	gem "shoulda-matchers"
+end
+
+group :development, :test do
 	gem "factory_girl_rails"
 	gem 'ffaker'
-	gem "shoulda-matchers"
 end
 
 group :development do
