@@ -26,8 +26,7 @@ describe Api::V1::ProductsController do
 			end
 			it "returns 4 records from the database" do
 				product_response = json_response
-				p product_response
-				expect(product_response[:products]).to have(4).items
+				expect(product_response[:products]).to have_at_least(4).items
 			end
 			it "returns the user object into each product" do
 				products_response = json_response[:products]

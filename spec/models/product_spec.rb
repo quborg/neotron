@@ -12,6 +12,7 @@ describe Product do
 	it { should respond_to(:image) }
 	it { should respond_to(:published) }
 	it { should respond_to(:user_id) }
+	it { should respond_to(:user) }
 
 	it { should_not be_published }
 

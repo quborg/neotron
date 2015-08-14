@@ -1,7 +1,7 @@
 class Api::V1::ProductsController < ApplicationController
 
-	respond_to :json
 	before_action :authenticate_with_token!, only: [:create, :update]
+	respond_to :json
 
 	def index
 		products = params[:product_ids].present? ? Product.find(params[:product_ids]) : Product.all
