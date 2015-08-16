@@ -90,11 +90,11 @@ describe Api::V1::ProductsController do
 		end
 		context "when is successfully updated" do
 			before(:each) do
-				patch :update, { user_id: @user.id, id: @product.id,	product: { title: "An expensive TV" } }
+				patch :update, { user_id: @user.id, id: @product.id,	product: { title: "An expensive" } }
 			end
 			it "renders the json representation for the updated user" do
 				product_response = json_response[:product]
-				expect(product_response[:title]).to eql "An expensive TV"
+				expect(product_response[:title]).to eql "An expensive"
 			end
 			it { should respond_with 200 }
 		end
